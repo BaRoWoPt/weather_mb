@@ -134,7 +134,7 @@ class _SplashScreenState extends State<SplashScreen>
                         offsetX -= (screenWidth + 90); // Quay lại bên trái
                       }
                       return Transform.translate(
-                        offset: Offset(offsetX, 20.0),
+                        offset: Offset(offsetX, 20.0), // Giữ nguyên vị trí
                         child: Opacity(
                           opacity: 0.6,
                           child: Image.asset(
@@ -151,13 +151,13 @@ class _SplashScreenState extends State<SplashScreen>
                     animation: _cloudAnimation,
                     builder: (context, child) {
                       double offsetX =
-                          (_cloudAnimation.value + 0.25) * (screenWidth + 120) -
+                          (_cloudAnimation.value + 0.15) * (screenWidth + 120) -
                               120;
                       if (offsetX > screenWidth) {
                         offsetX -= (screenWidth + 120);
                       }
                       return Transform.translate(
-                        offset: Offset(offsetX, 20.0),
+                        offset: Offset(offsetX, 20.0), // Giữ nguyên vị trí
                         child: Opacity(
                           opacity: 0.7,
                           child: Image.asset(
@@ -174,13 +174,13 @@ class _SplashScreenState extends State<SplashScreen>
                     animation: _cloudAnimation,
                     builder: (context, child) {
                       double offsetX =
-                          (_cloudAnimation.value + 0.5) * (screenWidth + 100) -
+                          (_cloudAnimation.value + 0.3) * (screenWidth + 100) -
                               100;
                       if (offsetX > screenWidth) {
                         offsetX -= (screenWidth + 100);
                       }
                       return Transform.translate(
-                        offset: Offset(offsetX, 20.0),
+                        offset: Offset(offsetX, 20.0), // Giữ nguyên vị trí
                         child: Opacity(
                           opacity: 0.8,
                           child: Image.asset(
@@ -197,19 +197,111 @@ class _SplashScreenState extends State<SplashScreen>
                     animation: _cloudAnimation,
                     builder: (context, child) {
                       double offsetX =
-                          (_cloudAnimation.value + 0.75) * (screenWidth + 80) -
+                          (_cloudAnimation.value + 0.45) * (screenWidth + 80) -
                               80;
                       if (offsetX > screenWidth) {
                         offsetX -= (screenWidth + 80);
                       }
                       return Transform.translate(
-                        offset: Offset(offsetX, 20.0),
+                        offset: Offset(offsetX, 20.0), // Giữ nguyên vị trí
                         child: Opacity(
                           opacity: 0.65,
                           child: Image.asset(
                             AssetsImagePath.cloud2,
                             height: 50,
                             width: 80,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  // Đám mây 5
+                  AnimatedBuilder(
+                    animation: _cloudAnimation,
+                    builder: (context, child) {
+                      double offsetX =
+                          (_cloudAnimation.value + 0.6) * (screenWidth + 110) -
+                              110;
+                      if (offsetX > screenWidth) {
+                        offsetX -= (screenWidth + 110);
+                      }
+                      return Transform.translate(
+                        offset: Offset(offsetX, 20.0), // Giữ nguyên vị trí
+                        child: Opacity(
+                          opacity: 0.75,
+                          child: Image.asset(
+                            AssetsImagePath.cloud1,
+                            height: 65,
+                            width: 110,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  // Đám mây 6
+                  AnimatedBuilder(
+                    animation: _cloudAnimation,
+                    builder: (context, child) {
+                      double offsetX =
+                          (_cloudAnimation.value + 0.75) * (screenWidth + 95) -
+                              95;
+                      if (offsetX > screenWidth) {
+                        offsetX -= (screenWidth + 95);
+                      }
+                      return Transform.translate(
+                        offset: Offset(offsetX, 20.0), // Giữ nguyên vị trí
+                        child: Opacity(
+                          opacity: 0.6,
+                          child: Image.asset(
+                            AssetsImagePath.cloud2,
+                            height: 55,
+                            width: 95,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  // Đám mây 7
+                  AnimatedBuilder(
+                    animation: _cloudAnimation,
+                    builder: (context, child) {
+                      double offsetX =
+                          (_cloudAnimation.value + 0.9) * (screenWidth + 105) -
+                              105;
+                      if (offsetX > screenWidth) {
+                        offsetX -= (screenWidth + 105);
+                      }
+                      return Transform.translate(
+                        offset: Offset(offsetX, 20.0), // Giữ nguyên vị trí
+                        child: Opacity(
+                          opacity: 0.7,
+                          child: Image.asset(
+                            AssetsImagePath.cloud1,
+                            height: 70,
+                            width: 105,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  // Đám mây 8
+                  AnimatedBuilder(
+                    animation: _cloudAnimation,
+                    builder: (context, child) {
+                      double offsetX =
+                          (_cloudAnimation.value + 1.05) * (screenWidth + 85) -
+                              85;
+                      if (offsetX > screenWidth) {
+                        offsetX -= (screenWidth + 85);
+                      }
+                      return Transform.translate(
+                        offset: Offset(offsetX, 20.0), // Giữ nguyên vị trí
+                        child: Opacity(
+                          opacity: 0.65,
+                          child: Image.asset(
+                            AssetsImagePath.cloud2,
+                            height: 60,
+                            width: 85,
                           ),
                         ),
                       );
